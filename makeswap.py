@@ -1,5 +1,15 @@
 #!/usr/bin/env python
 #coding:utf-8
+#
+# Usage:
+#
+# 1. Attach as a script to one of your Roles (HostInit is a good event)
+#
+# 2. Configure the "SWAP_DEVICES" Global Variable as a comma-separated list
+# of the devices you'd like to mount as swap. (e.g. /dev/xvdb, /dev/xvdc).
+# (Spaces are optional).
+#
+# TODO: Check this works if a partition of the device is mounted already
 
 import os
 import stat
@@ -15,9 +25,6 @@ logger = logging.getLogger("makeswap")
 
 FSEntry = collections.namedtuple("FSEntry", ["fs", "dir", "type", "options", "dump", "pass_"])
 SwapEntry = collections.namedtuple("SwapEntry", ["fname", "type", "size", "used", "priority"])
-
-
-#TODO: How is this going to work if a partition is mouned as swap already?
 
 
 def is_block_device(device_name):
