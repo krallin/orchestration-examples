@@ -16,7 +16,7 @@ set -o nounset
 # %git_branch%, $GIT_BRANCH          : The branch to clone. Default: "master"
 # $GIT_SSH_KEY                       : An (optional) unencrypted SSH Key.
 #
-# Note: Script Parameters can't be multiline, so SSH keys aren't supported as
+# NOTE: Script Parameters can't be multiline, so SSH keys aren't supported as
 # a Script Parameter
 
 # Pick up Script variables
