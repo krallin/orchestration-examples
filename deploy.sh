@@ -5,7 +5,10 @@ set -o nounset
 # An Orchestration Script to replace Deployments.
 # Add this script on BeforeHosUp as a synchronous Script, and configure it
 # using Global Variables or Script Parameters.
+#
 # NOTE: Script Parameters take precedence over Global Variables
+# NOTE: You do NOT need to define Script Parameters if you are using Global
+#       Variables
 #
 # Configuration:
 # %deploy_path%, $DEPLOY_PATH        : The path to deploy to. Required.
