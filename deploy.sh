@@ -19,11 +19,6 @@ set -o nounset
 # NOTE: Script Parameters can't be multiline, so SSH keys aren't supported as
 # a Script Parameter
 
-# Pick up Script variables
-REAL_DEPLOY_PATH="%deploy_path%"
-REAL_GIT_REPOSITORY="%git_repository%"
-REAL_GIT_BRANCH="%git_branch%"
-
 # Set up default environment variables
 : ${DEPLOY_PATH:=""}
 : ${GIT_REPOSITORY:=""}
